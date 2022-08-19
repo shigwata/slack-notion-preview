@@ -51,18 +51,18 @@ Since it is a web application written in Node.js, it can easily be run anywhere,
 - `SLACK_TOKEN`: Slack App token obtained in steps 2-5
 - `SLACK_SIGNING_SECRET`: Request signature verification secret obtained in step 2-6
 
-#### Running on Heroku
+#### Running on Cloud Run
 
 You can deploy from the following button
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/anycloud-inc/slack-notion-preview)
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
 
 ※ The page will not be displayed even if you access the URL root of the deployed app, but this is just a specification, so don't worry about it.
 
 ### STEP 4: Register the URL of STEP 3 to the app created in STEP 2.
 
 - Open the left menu `Event Subscriptions`
-- Enter `{URL of the app deployed in STEP 3}/slack/events` in Request URL (e.g. https://your-app.herokuapp.com/slack/events)
+- Enter `{URL of the app deployed in STEP 3}/slack/events` in Request URL (e.g. https://your-app-uc.a.run.app/slack/events)
 - When `Verified` is displayed, turn `Enable Events` on and save changes.
 
 ### STEP 5: Invite Slack App bot to the channel.

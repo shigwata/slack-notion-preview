@@ -51,18 +51,18 @@ Node.js で書かれた Web アプリケーションなので、任意の場所�
 - `SLACK_TOKEN`: 手順 2-5 で取得した Slack App のトークン
 - `SLACK_SIGNING_SECRET`: 手順 2-6 で取得したリクエスト署名検証 secret
 
-#### Heroku で動かす場合
+#### Cloud Run で動かす場合
 
 以下のボタンからデプロイできます。
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/anycloud-inc/slack-notion-preview)
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
 
 ※ デプロイしたアプリの URL ルートにアクセスしてもページは表示されませんが仕様なので気にしないでください。
 
 ### 4. 2 で作った app に、3 の URL を登録する
 
 - 左メニュー Event Subscriptions を開く
-- Request URL に `3でデプロイしたアプリのURL/slack/events` を入力（e.g. https://your-app.herokuapp.com/slack/events）
+- Request URL に `3でデプロイしたアプリのURL/slack/events` を入力（e.g. https://your-app-uc.a.run.app/slack/events)
 - Verified と表示されたら Enable Events を On にして Save Changes
 
 ### 5. Slack App の bot をチャンネルに招待する
